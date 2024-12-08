@@ -10,8 +10,31 @@
       <span id="txtOut" style="white-space: nowrap"></span>
     </div>
     <ol>
-      <li>[Write the question here, and copy this for more questions]</li>
-      <p>[Write your answer here, and copy this for more answers]</p>
+      <li>In part 1, is it possible to solve the problem using a single "for" loop?</li>
+      <p>Ja, det er mulig å løse oppgaven ved å kun bruke en enkel "for" løkke. Da bruker du en "for" løkke som går fra 1 til 10. Samtidig definerer du to tekststrenger; en som navngis som den som teller opp og den andre navngis som den som teller ned. Etter løkken så printer du ut begge tekststrengene i separate linjer ved å bruke break.</p>
+      <li>In part 2, can we create what is known as an "infinite" loop within the condition of the "while" loop?
+        Describe what would or would not be necessary to achieve this. Provide a thorough explanation of
+        your answer.</li>
+      <p>Ja, det er mulig å lage en uendelig løkke i "while" løkken. Dette kommer an på hvordan den er strukturert. Løkken kjøres så lenge "answerNumber" ikke er lik "guessNumber". Inni løkken er "guessNumber" oppdatert med en tilfeldig verdi mellom 1 og 60 ved å bruke math.random() og math.ceil(). 
+        Løkken vil avsluttes fordi det er en sannsynlighet for at tallet 45 vil dukke opp siden det kjøres tilfeldige tall mellom 1 og 60. Dette vil altså sikre at løkken blir å avsluttes.
+        En uendelig løkke skjer ved at "while" tilstanden alltid er sann og at koden inni løkken aldri kommer frem til å kunne bryte tilstanden. 
+        Dette kan gjøres ved å fjerne eller feilaktig oppdatere "guessNumber". Dersom denne ikke oppdateres riktig inni løkken, vil tilstanden aldri endres, dette fører til en uendelig løkke.
+      </p>
+      <li>Discuss briefly how quickly or slowly a computer might be able to compute this, considering the
+        number of guesses and the time it takes. How does the program behave while it is guessing? Can
+        the program perform other tasks concurrently?</li>
+      <p>Hvor raskt datamaskinen kommer frem til løsningen belager seg på hvor mange gjetninger det tar før riktig gjetning fremkommer. Siden det er tilfeldig hvilket tall mellom f.eks. 1-60 blir gjettet, så vil det variere fra gang til gang hvor lang tid det tar før f.eks. tallet 45 blir gjettet.
+        Dagen moderne datamaskiner kan utføre millioner av interaksjoner pr sekund, så programmet vil sannsynligvis finne frem til korrekt gjetning ganske fort til tross for hundre til tusenvis av gjetninger.
+        Løkken vil kontinuerlig sammenligne den tilfeldig genererte "guessNumber" mot "answerNumber". I denne prosessen vil det ikke genereres noe utdata før det er gjettet riktig. 
+        Javascript vil gå gjennom koden linje for linje, det vil si at den kun utfører en oppgave om gangen.  
+      </p>
+      <li>Explain the relationship between rows and columns in nested "for" loops. Can we, for instance,
+        change the order, considering rows to be innermost or columns to be innermost, or does this not
+        matter?</li> 
+      <p>Forholdet mellom rader og kolonner i nested "for" løkker avhenger av hvordan løkkene er strukturert. De ytre løkkene kontrollerer vanligvis radene. De indre løkkene kontrollerer vanligvis kolonnene.
+        Det er mulig å endre rekkefølgen dersom du bytter om til at kolonnene er i den ytre løkken og radene i den indre løkken.
+        Rekkefølgen vil påvirke hvordan utdataen blir strukturert og kan i noen tilfeller føre til ytelsesimplikasjoner. 
+      </p>
     </ol>
     <script type="module" src="./task_3-2.mjs" defer></script>
   </body>
