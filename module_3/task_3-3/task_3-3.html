@@ -10,8 +10,28 @@
       <span id="txtOut" style="white-space: nowrap"></span>
     </div>
     <ol>
-      <li>[Write the question here, and copy this for more questions]</li>
-      <p>[Write your answer here, and copy this for more answers]</p>
+      <li>What is the difference between invoking and creating a function?</li>
+      <p>Det å skape en funksjon betyr å definere hva funksjonen gjør uten at den utføres. Det å påkalle en funksjon vil som det ligger i ordet si at man kaller eller utfører funksjonen. Dette skjer når koden inne i funksjonen kjører.
+        Kort sagt er det å skape funksjonen å definere "oppskriften", mens å påkalle funksjonen er å utføre definisjonen.
+      </p>
+      <li>Explain the syntax regarding semicolons and code blocks.</li>
+      <p>Semikolon benyttes når du skal markere en avslutning på en kode. Javascript innehar en automaisk funksjon som legger til en semikolon for deg de gangene du gelmmer å gjøre det selv. Det er likevel viktig å forstå selv når semikolon skal brukes for å unngå feil.
+        Kodeblokker er biter av kode som omfattes av disse tegnene: {}. Det som blir kodet innenfor disse blir gruppert sammen og benyttes vanligvis i løkker, funksjoner og betingelser. 
+      </p>
+      <li>What happens when we try to store values from a function when it doesn't return any?</li>
+      <p>Dersom en funksjon ikke har en retursetning, så vil den implisitt returnere en spesiell verdi  som kalles for "undefined". Dette skjer fordi javascript-funksjonen alltid vil returnere noe. Dermed vil den returnere den angitte verdien eller udefinert dersom det ikke er lagt inn noen verdi. Enkelte ganger brukes noen funksjoner uten returverdi for dens bivirkninger, ved å bruke den som logging eller modifisering av data istedet for å produsere et resultat. </p>
+      <li>How do we separate parameters from each other when creating a function?</li>
+      <p>Parametere fungerer som "placeholders" som er oppført i en funksjons definisjon. Når en funksjon opprettes, så skiller man flere parametere ved hjelp av kommaer. Når funksjonen kalles, så tilføyes argumentene (verdiene) i parameterne, disse er atskilt med komma. </p>
+      <li>Explain how parameter names are related during the invocation and creation of a function.</li>
+      <p>Når en funksjon defineres, så vil parameterene oppføre seg som "placeholders". Disse parameterne har ikke en faktisk verdi enda og er som variabler som venter på at de skal bli gitt en verdi. En funksjons-påkalling skjer når du gir argumenter. Disse argumentene er de faktiske verdiene som er blitt tildelt parameterne. 
+        Forholdet mellom parameterne og argumenter er at de sammen fungerer som kartlegging. Hvert argument som sendes under påkalling blir tilordnet den tilsvarende parameteren i den rekkefølgen de vises. Dersom du har færre argumenter enn parametere så vil den overflødige parameteren bli kjørt som udefinert. 
+      </p>
+      <li>Explain why a parameter is undefined when a function call is missing a parameter.</li>
+      <p>Dette skjer fordi javascript ikke har en automatisk funksjon der det tildeles en standardverdi dersom du ikke setter en verdi i parameteren. </p>
+      <li>Explain what happens when we use recursive functions.</li>
+      <p>En rekursiv funksjon er en funksjon som kaller på seg selv for å løse et problem. Dette benyttes for å bryte ned problemer i mindre delproblemer. 
+        En rekursiv funksjon består av to deler. "Base case" og "recursive case". "Base case" er en tilstand som stopper rekursjonen og hindrer den i å fortsette på ubestemt tid. "Recursive case" er den delen der funksjonen kaller på seg selv med et modifisert argument og kommer nærmere "base case".
+      </p>
     </ol>
     <script type="module" src="./task_3-3.mjs" defer></script>
   </body>
