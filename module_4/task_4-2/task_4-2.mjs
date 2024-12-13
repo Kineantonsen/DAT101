@@ -20,7 +20,7 @@ printOut("--- Part 2 -----------------------------------------------------------
 a custom defined character separating all the elements.
 ○ Hint: You should be able to do it with just one line of code*/
 
-printOut(numbers.join("😃 "));
+printOut(numbers.join(", "));
 printOut(newLine);
 
 printOut("--- Part 3 ----------------------------------------------------------------------------------------------");
@@ -136,48 +136,40 @@ Create a loop that traverses this "key" array and prints all the elements that e
 ○ Hint: Use W3Schools as I have shown you, here you see good examples of exactly this!*/
 
 const EWeekDays = {
-  WeekDay1: { value: 0x01, name: "Mandag"},
-  WeekDay2: { value: 0x02, name: "Tirsdag"},
-  WeekDay3: { value: 0x04, name: "Onsdag"},
-  WeekDay4: { value: 0x08, name: "Torsdag"},
-  WeekDAy5: { value: 0x10, name: "Fredag"},
+  WeekDay1: { value: 0x01, name: "Mandag" },
+  WeekDay2: { value: 0x02, name: "Tirsdag" },
+  WeekDay3: { value: 0x04, name: "Onsdag" },
+  WeekDay4: { value: 0x08, name: "Torsdag" },
+  WeekDay5: { value: 0x10, name: "Fredag" },
   WeekDay6: { value: 0x20, name: "Lørdag"},
-  WeekDay7: { value: 0x40, name: "Søndag"},
-  WorkDays: { value: 0x01 + 0x02 + 0x04 + 0x08 + 0x10, name: "Arbeidsdagen"},
-  Weekends: { value: 0x20 + 0x40, name: "Helg"},
+  WeekDay7: { value: 0x40, name: "Søndag", type: "Helligdag" },
+  Workdays: { value: 0x01 + 0x02 + 0x04 + 0x08 + 0x10, name: "Arbeidsdager" },
+  Weekends: { value: 0x20 + 0x40, name: "Helg" },
 };
 
-const keys = Object.keys(EWeekDays); // Dette gir oss alle nøklene i objektet EWeekDays
+const keys = Object.keys(EWeekDays); //Dette gir oss alle nøklene i objektet EWeekDays
 printOut("Keys: " + keys.join(", ")); // Her printer vi ut alle nøklene i objektet EWeekDays
-const values = Object.values(EWeekDays); // Dette gir oss alle verdiene i objektet EWeekDays
-printOut("Values: " + values.join(", "));// Her printer vi ut alle verdiene i objektet EWeekDays
-let valueKeys = Object.values(EWeekDays[keys[0]]); // Her ser vi på verdien til nøkkelen Workdays
-printOut("ValueKeys: " + valueKeys.join(", ")); // Her printer vi ut verdien til nøkkelene Workdays
+const values = Object.values(EWeekDays); //Dette gir oss alle verdiene i objektet EWeekDays
+printOut("Values: " + values.join(", ")); // Her printer vi ut alle verdiene i objektet EWeekDays
+let valueKeys = Object.values(EWeekDays[keys[7]]); //Her ser vi på verdien til nøkkelen Workdays (7)
+printOut("ValueKeys: " + valueKeys.join(", ")); // Her printer vi ut verdien til nøkkelen Workdays (7)
 
+//Vi går igjennom alle nøklene til objektet EWeekDays
 for(let index = 0; index < keys.length; index++){
-  // Vi henter ut navnet på nøkkelen (f.eks WeekDay1)
+  let text = "";
+  //Vi henter ut navnet på nøkkelen (f.eks. WeekDay1)
   const key = keys[index];
   text = key + ": ";
-
-  // to do: skriv ut alle nøklene og verdien til nøklene 
-const keyObject = EWeekDays[key]; // Henter vi objektet til nøkkelen (f.eks. WeekDay1)
-const keyObjectKeys = Object.keys(keyObject); // Her henter vi alle nøklene til f. eks WeekDay1
-for(let i = 0; i < keys.length; i++) {
-  const keyObjectKey = keyObjectKeys[i]; // Her henter vi ut nøkkelen (f.eks value)
-  const keyObjectValue = keyObject[keyObjectKey]; //Her hener vi ut verdien til nøkkelen (f.eks 0x01)
-  text += " " + keyObjectKey + ": " + keyObjectValue;
-
+  //TODO: Skriv ut alle nøklene og verdiene til nøklene
+  const keyObject = EWeekDays[key]; //Henter vi objektet til nøkkelen (f.eks. WeekDay1)
+  const keyObjectKeys = Object.keys(keyObject); //Her henter vi alle nøklene til for eksempel WeekDay1
+  for(let i = 0; i < keyObjectKeys.length; i++){
+    const keyObjectKey = keyObjectKeys[i]; //Her henter vi ut nøkkelen (f.eks. value)
+    const keyObjectValue = keyObject[keyObjectKey]; //Her henter vi ut verdien til nøkkelen (f.eks. 0x01)
+    text += " " + keyObjectKey + ": " + keyObjectValue;
+  }
+  printOut(text);
 }
-printOut (text);
-
-
-  //vi printer ut alle verdiene til nøkkelene (f.eks 0x01, Mandag)
-  valueKeys = Object.values(EWeekDays[keys[index]]);
-
-  //vi printer ut nøkkelen og verdiene til nøkkelen
-  printOut(keys[index] + " = " + valueKeys.join(", "));
-}
-
 printOut(newLine);
 
 printOut("--- Part 8 ----------------------------------------------------------------------------------------------");

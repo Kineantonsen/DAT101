@@ -10,8 +10,53 @@
       <span id="txtOut" style="white-space: nowrap"></span>
     </div>
     <ol>
-      <li>[Write the question here, and copy this for more questions]</li>
-      <p>[Write your answer here, and copy this for more answers]</p>
+      <li>What is an array? A short and concise answer is expected here!</li>
+      <p>Dette er en type struktur som gjør det mulig å liste opp ulike elementer (f.eks. tall, tekst, eller objekter) i en og samme variabel. Elementene innen en liste kodes inni disse tegnene: [].</p>
+      <li>What does it mean to "hardcode" when we talk about programming? (In English, it's called "hard
+        coding", "hard-coding", or "hardcoding").</li>
+      <p>Hardkoding betyr å legge inn faste verdier direkte i koden istedet for å benytte f.eks. variabler. Et eksempel på dette kan være: 
+        let number = 20. printOut("Your number is " + number); 
+        Dette vil gjøre det vanskelig å oppdatere eller muliggjøre gjentakende bruk av denne senere i kodinga. Det kan også føre til feil dersom verdien trenger å endre flere steder. 
+        Hardkoding kan være en fordel å bruke i prototyper der man skal ta en rask sjekk eller teste koden, eller til mindre prosjekter der fleksibilitet ikke er prioritert. 
+      </p>
+      <li>Explain in plain text what happens in task 3, and how we can traverse (iterate) the array when we
+        (humans) don't "know" how long the array is.</li>
+      <p>Først blir teksten "Hei på deg!" definert i "grating". Split metoden deler teksten inn i lister av ordene med mellomrom(" "). Deretter blir en for-løkke brukt for å gjenta prosessen gjennom "array". Loopen gjentas så lenge i er mindre enn myArray.length. i++ øker i med en etter hver interaksjon.
+        Man trenger ikke vite lengden på array i javascript. Når vi ikke vet lengden på en array så benytter vi oss av .length egenskapen. Denne forteller oss totalt antall elementer innenfor en "array".  </p>
+      <li>Why is it beneficial to store instances of a class in arrays, as in task 4?</li>
+      <p>Det er en fodel fordi den lar deg organisere, administrere og utføre operasjoner på datasamlinger på en effektiv måte. Array gir deg en enkel tilgang til hvilken som helst av elementene ved å bruke index. F.eks. gir girls[2] resultatet "Kari". Den gjør det også mulig å søke på en effektiv måte ved å bruke .find(), .filter() eller .includes for å lokalisere utvalgte elementer.
+        Array lar deg legge til, fjerne eller modifisere elementer etter eget ønske. Dette ved å f.eks. bruke .splice, denne fjerner et element fra arrayen. 
+      Array er også fin å bruke i løkker (gjentakelser) der alle elementene gjennomgåes enten ved bruk av "for", "forEach" eller "map". </p>
+      <li>Try your best to explain the EWeekDays object from task 7. How do we use the "value" attribute, for
+        example? In what way do "WeekDay", "Workdays", and "Weekends" differ from each other? If we
+        wanted to create a new element "WorkoutDays", which would contain "Monday", "Wednesday", and
+        "Thursday", how would it ideally look? (I will choose the best answer to this task and reward it with
+        pizza in the cafeteria right after New Year. Remember to mark in your submission if you want to
+        participate in the competition!)</li>
+      <p>EWeekDays objektet organiserer ukedager inn i nøkkel-verdier. Nøklene i koden i oppgave 7 blir representer som WeekDay1, Workdays og Weekends. Verdiene er objektene som inneholder attributter: verdien er satt i numerisk representasjon av ukedagen, mens name er satt som et lesbart navn av ukedagen. Type er satt som en tilleggsinformasjon som f.eks. "Helligdag" for søndag. 
+        Value attributten bruker stykkevise attributter for å representere individuelle dager eller grupper av dager. Disse verdiene er potenser av 2 i heksadesimal notasjon (0x01, 0x02 osv.), slik at de kan kombineres på en unik måte ved hjelp av addisjons- eller stykkevise operasjoner. 
+        Forskjellen mellom "WeekDay", "Workdays" og "Weekends": WeekDay representerer en enkel dag og inkluderer attributter som value og name. Workdays kombinerer flere ukedager (mandag-fredag) i en enkelt oppføring ved å summere deres verdi-attributter. Weekends kombinerer lørdag og søndag for å representere "Helg.
+        Dersom man ønsker å legge til "WorkoutDays" som inkluderer mandag, onsdag og torsdag, så må man kombinere disse dagene sine verdi-attributter (0x01 + 0x03 + 0x08).
+        EWeekDays.WorkoutDays = {
+          value: 0x01 + 0x03 + 0x08,
+          name: "Treningsdager"
+        }
+        Her er disse dagene blitt inkludert i WorkoutDays. 
+      </p>
+      <li>In task 8, we will use a "callback" routine when sorting. Explain how such a "callback" routine works.</li>
+      <p>En slik callback rutine er en funksjon som sendes som et argument til en annen funksjon. Dette gjør at den mottakende funksjonen kan svare tilbake den angitte funksjonen på et tidspunkt i prosessen. I oppgave 8 blir denne rutinen gjort ved hjelp av .sort() funksjonen.</p>
+      <li>What happens in the sorting routines you have created? Try to explain how the array can figure out
+        if an element should come before or after another. The best way to answer this is to actually print
+        both parameters each time the sorting routine runs.</li>
+      <p>I koden som er skrevet i oppgave 8 så trekker funksjonen aValue2 fra aValue 1. Dersom resultet er negativt (aValue1 < aValue29), plasseres aValue1 før aValue2. Dersom resultatet er positivt (aValue1 > aValue2), så plasseres aValue1 etter aValue2. Hvis resultet er null, så endres ikke rekkefølgen.</aValue29></p>
+      <li>In task 10, we will create an array with rows and columns. Explain what the first element of the array
+        contains.</li>
+      <p>Koden i oppgave 10 lager en todimensjonal array kalt myTable, der hvert element i myTable representerer en rad. Hver rad er en array som inneholder kolonner (celler). 
+        Den ytre loopen gjentar 5 ganger (row = 0 til 4), hvor det skapes 5 rader i myTable. For hver rad blir en ny kolonne skapt.
+        I den indre loopen blir kolonnene gjentatt 9 ganger (column = 0 til 8), der 9 celler skapes for hver rad.
+      </p>
+
+      
     </ol>
     <script type="module" src="./task_4-2.mjs" defer></script>
   </body>
