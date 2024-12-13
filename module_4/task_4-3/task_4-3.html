@@ -101,13 +101,20 @@
     pages.</li>
   <p>DOM er et kraftig grensesnitt som lar deg samhandle med og manipulere en nettsides struktur, stil og innhold dynamisk ved hjelp av Javascript. Dette er viktig for å kunne bygge en interaktiv nettside. Man kan eksempelvis endre navnet på en knapp når den er klikket på og vise et varsel når den er klikket på. Det er også mulig å skape, fjerne og endre elementer på nettsiden i sanntid. Med DOM kan man oppdatere utseende til elementene</p>
   <li>What is an event? Simply explain what happens when we add an event listener to an object.</li>
-  <p>[Write your answer here, and copy this for more answers]</p>
+  <p>Det er en handling eller en hendelse på en nettside som javascript kan svare på. Eksempler på event inkluderer musehandlinger der du kan klikke, sveve eller flytte musen. Tastaturhandlinger der du kan trykke på en tast og du kan gjøre endringer på siden ved å laste, endre størrelse eller scrolle på siden.
+    Når en event listener blir lagt til i et objekt (f.eks. en knapp eller tekstboks), så forteller du nettleseren at når denne hendelsen skjer så skal denne funksjonen kjøres. Når du klikker på knappen så "lytter" nettleseren etter hendelsen og kjører funksjonen du ga, altså (alert("Button clicked!")). Event listener gjør med andre ord en nettside interaktiv.</p>
   <li>Sometimes we need to use an event object to get data from the event. Explain how this event
     object is structured, don't explain all functions or attributes. Try to explain, for example, how to
     retrieve data from a keyboard or mouse.</li>
-  <p>[Write your answer here, and copy this for more answers]</p>
+  <p>Når en event inntreffer, så oppretter javascript et event-objekt som inneholder informasjon om hendelsen. Dette objektet blir automatisk sendt til event-handlingsfunksjonen, slik at man får tilgang til detaljer om hendelsen. 
+    Eksempel på et keyboard event er når en tastaturtast trykkes, så vil event objektet fortelle deg hvilken tast som ble trykket. 
+    Eksempel på en mouse event er når musen klikkes, så vil event objektets detaljer om musen posisjon og det klikkede elementet.
+  </p>
   <li>Explain the main difference between DOM id and DOM name. Can we have identical IDs?</li>
-  <p>[Write your answer here, and copy this for more answers]</p>
+  <p>En Id-attributt identifiserer et enkelt element i DOM. Dette skal kun være et element med en spesifikk ID på siden. 
+    name-attributten benyttes normalt til å gruppere eller merke elementer, spesielt i skjemaer. Flere elementer kan inneholde samme navn.
+    Kort sagt er id en unik identifikator (en per side), mens name er en delt attributt for gruppering (benyttes i skjemaer).
+  </p>
 </ol>
 <script type="module" src="./task_4-3.mjs" defer></script>
 </body>
